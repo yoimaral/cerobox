@@ -1,9 +1,7 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -15,9 +13,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = new User();
-
-        return view('admin.users.index', compact('users'));
+        //
     }
 
     /**
