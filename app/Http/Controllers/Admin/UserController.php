@@ -17,7 +17,7 @@ class UserController extends Controller
     {
         $users = new User();
 
-        return view('Admin.users.index', compact('users'));
+        return view('admin.users.index', compact('users'));
     }
 
     /**
