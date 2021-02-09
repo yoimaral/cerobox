@@ -16,4 +16,4 @@ mix.js("resources/js/app.js", "public/js").sass(
     "public/css"
 );
 
-mix.browserSync("http://localhost.test");
+mix.browserSync("Nova.test");
