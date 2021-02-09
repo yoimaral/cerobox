@@ -9,32 +9,35 @@
 
                 <div class="card-body">
 
-                    <table>
+                    <table class="table table-dark">
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Photo</th>
                                 <th>Name</th>
-                                <th>Document</th>
                                 <th>Email</th>
-                                <th>Phone Number</th>
-                                <th>Observations</th>
+                                <th>Type User</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @forelse ($users as $user)
-                            <td>{{$user->id}}</td>
-                            <td>{{$user->Photo}}</td>
-                            <td>{{$user->Name}}</td>
-                            <td>{{$user->Document}}</td>
-                            <td>{{$user->Email}}</td>
-                            <td>{{$user->Phone_Number}}</td>
-                            <td>{{$user->Observations}}</td>
+                            <tr>
+                                @forelse ($users as $user)
+                                <td>{{$user->id}}</td>
+                                <td>
+                                    {{$user->name}}
+                                </td>
+                                <td>{{$user->email}}</td>
+                                <td>
+                                    @if ($user->is_admin)
+                                    Admin
+                                    @else
+                                    User
+                                    @endif
+                                </td>
+                            </tr>
                             @empty
                             @endforelse
                         </tbody>
                     </table>
-
 
                 </div>
             </div>
