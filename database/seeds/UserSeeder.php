@@ -12,7 +12,7 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        $user = new User;
+        $user = new User();
         $user->name = 'Yoimar Lozano';
         $user->email = 'yoimar@gmail.com';
         $user->is_admin = true;
@@ -20,6 +20,6 @@ class UserSeeder extends Seeder
         $user->password = bcrypt('password');
         $user->save();
 
-        factory(App\User::class, 50)->create();
+        factory(App\User::class, 20)->create();
     }
 }
