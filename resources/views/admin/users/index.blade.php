@@ -16,6 +16,7 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Type User</th>
+                                <th>Delete</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -32,6 +33,17 @@
                                     @else
                                     User
                                     @endif
+                                </td>
+                                <td>
+                                    <form action="" method="POST">
+
+                                        @csrf
+                                        @method('DELETE')
+
+                                        <button type="submit" class="btn btn-danger mt-2">Delete</button>
+
+                                    </form>
+
                                 </td>
                             </tr>
                             @empty
