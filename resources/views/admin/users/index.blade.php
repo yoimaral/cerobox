@@ -15,6 +15,8 @@
                                 <th>#</th>
                                 <th>Name</th>
                                 <th>Email</th>
+                                <th>Observation</th>
+                                <th>Tipe Services</th>
                                 <th>Type User</th>
                                 <th>Details</th>
                                 <th>Edit</th>
@@ -29,6 +31,12 @@
                                     {{$user->name}}
                                 </td>
                                 <td>{{$user->email}}</td>
+                                <td>{{$user->observation}}</td>
+                                <td>@if ($user->tipe_services)
+                                    Advance
+                                    @else
+                                    Basic
+                                    @endif</td>
                                 <td>
                                     @if ($user->is_admin)
                                     Admin

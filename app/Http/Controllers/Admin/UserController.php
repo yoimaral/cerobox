@@ -84,7 +84,8 @@ class UserController extends Controller
     {
         if ($request->trick) {
             $user->update([
-                'name' => $request->name
+                'name' => $request->name,
+                'observation' => $request->observation,
             ]);
         } else {
             $user->update([
