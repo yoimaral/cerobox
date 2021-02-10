@@ -17,15 +17,8 @@
         </div>
 
         <div class="form-group">
-            <label for="observation">Observation</label>
-            <input name="observation" type="text" class="form-control" id="editObservation"
-                aria-describedby="observation" value="{{$user->observation}}">
-            <input type="text" name="trick" hidden value="trick">
-        </div>
-
-        <div class="form-group">
-            <label for="exampleInputName">Tipe Services</label>
-            <select name="select" class="form-select" aria-label="Default select example">
+            <label for="exampleInpuSelect">Tipe Services</label>
+            <select name="select" class="form-select" aria-label="Disabled select example">
                 <option selected>Select Tipe Services</option>
                 <option value="0">Basic</option>
                 <option value="1">Advance</option>
