@@ -16,6 +16,14 @@
             <input type="text" name="trick" hidden value="trick">
         </div>
 
+        <div class="form-group">
+            <label for="exampleInputName">Tipe Services</label>
+            <select name="select" class="form-select" aria-label="Default select example">
+                <option selected>Select Tipe Services</option>
+                <option value="0">Basic</option>
+                <option value="1">Advance</option>
+            </select>
+        </div>
 
         <button type="submit" class="btn btn-primary">Update</button>
 
