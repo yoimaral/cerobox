@@ -16,6 +16,8 @@
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Type User</th>
+                                <th>Details</th>
+                                <th>Edit</th>
                                 <th>Delete</th>
                             </tr>
                         </thead>
@@ -33,6 +35,10 @@
                                     @else
                                     User
                                     @endif
+                                </td>
+                                <td>
+                                    <a class="btn btn-outline-secondary"
+                                        href="{{route ('users.edit', $user)}}">Details</a>
                                 </td>
 
                                 <td>
