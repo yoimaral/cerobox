@@ -14,6 +14,9 @@ class UserSeeder extends Seeder
     {
         $user = new User();
         $user->name = 'Yoimar Lozano';
+        $user->document = '123123123';
+        $user->phone = '1232313456';
+        $user->observation = 'Admin';
         $user->email = 'yoimar@gmail.com';
         $user->is_admin = true;
         $user->email_verified_at = now();

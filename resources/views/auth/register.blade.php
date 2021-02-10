@@ -31,15 +31,9 @@
                                 class="col-md-4 col-form-label text-md-right">{{ __('Document') }}</label>
 
                             <div class="col-md-6">
-                                <input id="document" type="text"
-                                    class="form-control @error('document') is-invalid @enderror" document="document"
+                                <input id="document" type="text" class="form-control" document="document"
                                     value="{{ old('document') }}" required autocomplete="document" autofocus>
 
-                                @error('document')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
                             </div>
                         </div>
 
@@ -47,14 +41,8 @@
                             <label for="phone" class="col-md-4 col-form-label text-md-right">{{ __('Phone') }}</label>
 
                             <div class="col-md-6">
-                                <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror"
-                                    phone="phone" value="{{ old('phone') }}" required autocomplete="phone" autofocus>
-
-                                @error('phone')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                                @enderror
+                                <input id="phone" type="text" class="form-control" phone="phone"
+                                    value="{{ old('phone') }}" required autocomplete="phone" autofocus>
                             </div>
                         </div>
 
