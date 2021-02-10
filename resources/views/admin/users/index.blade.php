@@ -34,13 +34,18 @@
                                     User
                                     @endif
                                 </td>
+
                                 <td>
-                                    <form action="" method="POST">
+                                    <a class="btn btn-outline-secondary" href="{{route ('users.edit', $user)}}">Edit</a>
+                                </td>
+
+                                <td>
+                                    <form action="{{route ('users.destroy', $user)}}" method="POST">
 
                                         @csrf
                                         @method('DELETE')
 
-                                        <button type="submit" class="btn btn-danger mt-2">Delete</button>
+                                        <button type="submit" class="btn btn-danger mt-2">Eliminar</button>
 
                                     </form>
 
