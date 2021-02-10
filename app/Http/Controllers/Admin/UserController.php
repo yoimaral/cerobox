@@ -77,6 +77,7 @@ class UserController extends Controller
                 'name' => $request->name
             ]);
         }
+        return redirect()->route('users.index');
     }
 
     /**

@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Users') }}</div>
 
                 <div class="card-body">
-
+                    <a class="btn btn-outline-success" href="{{route ('users.create')}}">New User</a>
                     <table class="table table-dark">
                         <thead>
                             <tr>

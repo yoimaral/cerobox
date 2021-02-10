@@ -10,8 +10,10 @@
         @csrf
 
         <div class="form-group">
-            <label for="Name">Name</label>
-            <input name="name" type="text" class="form-control" id="Name" value="{{$user->name}}">
+            <label for="exampleInputName">Name</label>
+            <input name="name" type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp"
+                value="{{$user->name}}">
+            <input type="text" name="trick" hidden value="trick">
         </div>
 
 
