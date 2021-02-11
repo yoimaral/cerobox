@@ -46,7 +46,7 @@
                                 </td>
                                 <td>
                                     <a class="btn btn-outline-secondary"
-                                        href="{{route ('users.edit', $user)}}">Details</a>
+                                        href="{{route ('users.show', $user)}}">Details</a>
                                 </td>
 
                                 <td>
