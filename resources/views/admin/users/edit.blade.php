@@ -17,12 +17,18 @@
         </div>
 
         <div class="form-group">
-            <label for="exampleInpuSelect">Tipe Services</label>
+            <label for="exampleInpuSelect">Tipe Services</label><br>
             <select name="select" class="form-select" aria-label="Disabled select example">
                 <option selected>Select Tipe Services</option>
-                <option value="0">Basic</option>
-                <option value="1">Advance</option>
+                <option value="Basic">Basic</option>
+                <option value="Advance">Advance</option>
             </select>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleInpuSelect">Observation</label>
+            <textarea name="observation" class="form-control" aria-label="With textarea"></textarea>
+            <input type="text" name="trick" hidden value="trick">
         </div>
 
         <button type="submit" class="btn btn-primary">Update</button>

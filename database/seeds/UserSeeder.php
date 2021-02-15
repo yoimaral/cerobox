@@ -19,6 +19,7 @@ class UserSeeder extends Seeder
         $user->observation = 'Admin';
         $user->email = 'yoimar@gmail.com';
         $user->is_admin = true;
+        $user->tipe_services = 'Advance';
         $user->email_verified_at = now();
         $user->password = bcrypt('password');
         $user->save();

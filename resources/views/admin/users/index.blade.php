@@ -32,11 +32,7 @@
                                 </td>
                                 <td>{{$user->email}}</td>
                                 <td>{{$user->observation}}</td>
-                                <td>@if ($user->tipe_services)
-                                    Advance
-                                    @else
-                                    Basic
-                                    @endif</td>
+                                <td>{{($user->tipe_services)}}</td>
                                 <td>
                                     @if ($user->is_admin)
                                     Admin

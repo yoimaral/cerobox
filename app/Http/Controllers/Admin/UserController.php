@@ -86,14 +86,15 @@ class UserController extends Controller
             $user->update([
                 'name' => $request->name,
                 'observation' => $request->observation,
-            ]);
-        } else {
-            $user->update([
-                $user->tipe_services = $request->select ? null : now()
+                'tipe_services' => $request->select,
             ]);
         };
 
         return redirect()->route('users.index');
+    }
+
+    public function SlectTipe(User $user, Request $request)
+    {
     }
 
     /**
