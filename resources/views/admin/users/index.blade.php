@@ -14,6 +14,8 @@
                             <tr>
                                 <th>#</th>
                                 <th>Name</th>
+                                <th>Document</th>
+                                <th>Phone</th>
                                 <th>Email</th>
                                 <th>Observation</th>
                                 <th>Tipe Services</th>
@@ -29,6 +31,12 @@
                                 <td>{{$user->id}}</td>
                                 <td>
                                     {{$user->name}}
+                                </td>
+                                <td>
+                                    {{$user->document}}
+                                </td>
+                                <td>
+                                    {{$user->phone}}
                                 </td>
                                 <td>{{$user->email}}</td>
                                 <td>{{$user->observation}}</td>

@@ -32,7 +32,7 @@
 
                             <div class="col-md-6">
                                 <input id="document" type="text"
-                                    class="form-control @error('document') is-invalid @enderror" document="document"
+                                    class="form-control @error('document') is-invalid @enderror" name="document"
                                     value="{{ old('document') }}" required autocomplete="document" autofocus>
 
                                 @error('document')
@@ -48,7 +48,7 @@
 
                             <div class="col-md-6">
                                 <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror"
-                                    phone="phone" value="{{ old('phone') }}" required autocomplete="phone" autofocus>
+                                    name="phone" value="{{ old('phone') }}" required autocomplete="phone" autofocus>
 
                                 @error('phone')
                                 <span class="invalid-feedback" role="alert">
