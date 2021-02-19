@@ -13,6 +13,7 @@
                         <thead>
                             <tr>
                                 <th>#</th>
+                                <th>Img</th>
                                 <th>Name</th>
                                 <th>Document</th>
                                 <th>Phone</th>
@@ -29,6 +30,9 @@
                             <tr>
                                 @forelse ($users as $user)
                                 <td>{{$user->id}}</td>
+                                <td>
+                                    {{$user->img}}
+                                </td>
                                 <td>
                                     {{$user->name}}
                                 </td>

@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use Intervention\Image\Facades\Image;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -82,7 +84,15 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        if ($request->trick) {
+        if ($request->hasFile('img')) {
+            Storage::delete($user->img);
+
+            $user->fill($request->validated()); /* Se rellenan todos los campos sin guardar los en la base de datos */
+
+            $user->img = $request->file('img')->store('images');
+
+            $user->save();
+        } else {
             $user->update([
                 'name' => $request->name,
                 'observation' => $request->observation,

@@ -4,10 +4,25 @@
 <div class="container col-md-4">
 
     <!--FORM-->
-    <form action="{{route('users.update', $user)}}" method="POST">
+    <form action="{{route('users.update', $user)}}" enctype="multipart/form-data" method="POST">
 
         @method('PATCH')
         @csrf
+
+        <div class="form-group row mt-2">
+            <label for="img" class="col-md-4 col-form-label text-md-right">{{ __('Adjuntar Imagen') }}</label>
+            <div class="col-md-6">
+
+                <div class="custom-file">
+                    <input name="img" type="file" class="col-md-6 custom-file-input" id="customFile">
+                    <label class="custom-file-label" for="customFile">Seleccionar Archivo</label>
+                </div>
+
+            </div>
+        </div>
+        @error('img')
+        <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
 
         <div class="form-group">
             <label for="exampleInputName">Name</label>
